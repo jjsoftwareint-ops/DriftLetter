@@ -1,0 +1,27 @@
+<div class="settings-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Settings</mat-card-title>
+      <mat-card-subtitle>Manage your account</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="user-info">
+        <h3>Account Information</h3>
+        <p>
+          <strong>Name:</strong>
+          {{ authService.currentUser()?.displayName }}
+        </p>
+        <p>
+          <strong>Email:</strong>
+          {{ authService.currentUser()?.email }}
+        </p>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="warn" (click)="openLogoutDialog()">
+        <mat-icon>logout</mat-icon>
+        Logout
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

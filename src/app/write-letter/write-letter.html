@@ -1,0 +1,24 @@
+<div class="write-letter-container">
+  <div class="header">
+    <button mat-icon-button (click)="onClose()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="sendLetter()" [disabled]="!letterContent.trim()">
+      <mat-icon>send</mat-icon>
+    </button>
+  </div>
+
+  <div class="letter-content">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Your message</mat-label>
+      <textarea
+        matInput
+        [(ngModel)]="letterContent"
+        placeholder="Write your letter here..."
+        rows="20"
+        class="letter-textarea"
+      ></textarea>
+    </mat-form-field>
+  </div>
+</div>

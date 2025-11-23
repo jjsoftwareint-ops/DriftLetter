@@ -1,0 +1,14 @@
+.letterbox-container {
+  max-width: 800px;
+  margin: 0 auto;
+
+  mat-card {
+    margin-bottom: 16px;
+  }
+
+  .placeholder {
+    color: #999;
+    font-style: italic;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,36 @@
+.settings-container {
+  max-width: 800px;
+  margin: 0 auto;
+
+  mat-card {
+    margin-bottom: 16px;
+  }
+
+  .user-info {
+    h3 {
+      margin-bottom: 16px;
+      color: #333;
+    }
+
+    p {
+      margin: 8px 0;
+      color: #666;
+
+      strong {
+        color: #333;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  mat-card-actions {
+    padding: 16px;
+    border-top: 1px solid #e0e0e0;
+
+    button {
+      mat-icon {
+        margin-right: 8px;
+      }
+    }
+  }
+}

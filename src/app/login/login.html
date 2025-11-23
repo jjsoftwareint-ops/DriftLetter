@@ -1,0 +1,25 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <mat-card-title>Welcome to DriftLetter</mat-card-title>
+      <mat-card-subtitle>Sign in to continue</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="login-content">
+        <p>Connect with random people and share meaningful letters</p>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="loginWithGoogle()"
+        [disabled]="isLoading"
+        class="google-btn"
+      >
+        <mat-icon>account_circle</mat-icon>
+        {{ isLoading ? 'Signing in...' : 'Sign in with Google' }}
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
