@@ -28,19 +28,21 @@ export const loginGuard = () => {
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/login',
     pathMatch: 'full',
   },
   {
     path: 'login',
     loadComponent: () => import('./login/login').then((m) => m.Login),
+    canActivate: [loginGuard],
   },
   {
     path: 'home',
     loadComponent: () => import('./home/home').then((m) => m.Home),
+    canActivate: [authGuard],
   },
   {
     path: '**',
-    redirectTo: '/home',
+    redirectTo: '/login',
   },
 ];
